@@ -20,20 +20,34 @@
 //  THE SOFTWARE.
 //
 import UIKit
-
-//: [Previous](@previous)
-
 /*:
- # Constants
+ # Variables
  
  ## Syntax
- ![Constants Syntax](syntax-let.png)
+ ![Variables Syntax](syntax-var.png)
  */
-let name = "Harry"
+var name = "Swift"
+var year = 2020
+var valid = false
+
+var x = 0.0, y = 0.0, z = 0.0
 
 name
-// 스위프트에선 상수를 더 선호
-// 1. 실수로 값을 변경하는 경우가 없다
-// 2. 코드가 조금 더 빨리 실행된다
+print(name)
+print(year)
+print(valid)
+/*:
+ ## Syntax
+ ![Variables Syntax](syntax-var-new-value.png)
+ */
+name = "Steve"
+name = "Harry"
 
-// 값을 변경할 필요가 없다면 반드시 상수로 선언해야 합니다.
+print(name)
+
+var anotherName = name // 값 복사 기능
+anotherName = "Tim"
+print(name, anotherName)
+
+// year = "2018" Error
+//: [Next](@next)
