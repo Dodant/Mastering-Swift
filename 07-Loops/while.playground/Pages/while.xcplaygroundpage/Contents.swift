@@ -29,23 +29,16 @@ import UIKit
  ![while](syntax-while.png)
  */
 
+// For In loop 	- Range, Collection
+// While loop	- Condition
 
+var num = 1
+var sum = 0
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+while num <= 10 {
+	sum += num
+	num += 1
+}
+sum
 
 //: [Next](@next)
-
-

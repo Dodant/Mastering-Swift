@@ -22,39 +22,45 @@
 import UIKit
 /*:
  # For-In Loops
- */
-
-
-
-
-
-
-
-
-
-
-
-/*:
  ## Syntax
  ![syntax](syntax-range.png)
  */
 
+for index in 1 ... 5 {
+	print(index)
+}
 
+for _ in 1 ... 5 {	// Wildcard Pattern _
+	print("Hello")
+}
 
+let power = 10
+var result = 1
 
+for _ in 1 ... power {
+	result *= 2
+}
 
-
-
-
+for num in stride(from: 0, through: 10, by: 2) {
+	print(num)
+}
 
 /*:
  ## Syntax
  ![syntax](syntax-collection.png)
  */
 
+let list = ["apple", "banana", "Orange"]
+for fruits in list {
+	print(fruits)
+}
 
-
-
+for i in 2 ... 9 {
+	for j in 1 ... 9 {
+		print("\(i)*\(j)=\(i*j)", terminator:"\t")
+	}
+	print()
+}
 
 
 
