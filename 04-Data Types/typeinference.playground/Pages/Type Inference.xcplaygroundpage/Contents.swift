@@ -23,6 +23,8 @@ import UIKit
 /*:
  # Type Inference
  */
+// 형식 추론
+
 let num = 123
 type(of: num)
 

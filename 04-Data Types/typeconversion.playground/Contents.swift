@@ -27,8 +27,8 @@ import UIKit
  ## Syntax
  ![TypeConversion](type-conversion.png)
  */
-// Type Conversion
-// Type Casting
+// Type Conversion 	- 메모리에 저장된 값을 다른 형식으로 바꿔서 새로운 값을 형성
+// Type Casting		- 메모리에 저장된 값을 그대로 두고 컴파일러가 다른 형성으로 처리하도록 지시
 
 let a = 123
 let b = 4.56

@@ -33,4 +33,6 @@ let num: Int = 123
 
 let value: Double
 value = 12.3
+
+// let ch - Error
 //: [Next](@next)

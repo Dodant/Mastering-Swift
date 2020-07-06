@@ -32,3 +32,11 @@ let result = rate * Double(amt)
 
 Int(rate * Double(amt))
 Int(rate) * amt
+
+let a = 7
+let b: Int8 = 8
+// a*b		Binary operator '*' cannot be applied to operands of type 'Int' and 'Int8'
+
+
+// let a = 7
+// let b: Int64 = 8

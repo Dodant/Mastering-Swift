@@ -30,12 +30,15 @@ import UIKit
 Int8.min
 Int8.max
 
-MemoryLayout<Int8>.size
+MemoryLayout<Int8>.size	// 바이트 단위
 /*:
  ## Signed vs Unsigned
  
  ![SignedUnsigned](signed-unsigned.png)
  */
+Int8.min
+Int8.max
+
 UInt8.min
 UInt8.max
 
@@ -43,7 +46,7 @@ MemoryLayout<UInt8>.size
 /*:
  ## Int & UInt
  */
-// 주로 Int 사용
+// 주로 Int 사용 - 정수를 가장 빠르게 처리
 
 MemoryLayout<Int>.size
 
