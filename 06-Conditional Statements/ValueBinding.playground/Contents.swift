@@ -27,22 +27,24 @@ import UIKit
  ![value-binding](value-binding.png)
  */
 
+let a = 1
 
+switch a {
+case let x where x > 100:
+	print(x)
+default:
+	break
+}
 
+let pt = (1,2)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+switch pt {
+case let(x,y):
+	print(x,y)
+case (let x, let y):
+	print(x,y)
+case (let x, var y):
+	print(x,y)
+case let (x, _):
+	print(x)
+}

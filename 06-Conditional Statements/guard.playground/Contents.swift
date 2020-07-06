@@ -44,9 +44,7 @@ func validate(id: String?) -> Bool {
 }
 
 validate(id: nil)
-
 validate(id: "abc")
-
 validate(id: "abcdefg")
 
 
@@ -67,3 +65,6 @@ func validateUsingGuard() {
 	guard str.count >= 6 else { return }
 	print(str)
 }
+
+// 조건이 하나이거나, 조건 자체가 단순한 경우, 바인딩한 상수를 다른 값을 처리하는 임시값으로 처리할 경우 - if
+// 복잡한 조건을 여러개 구현하거나, 바인딩한 상수를 동일한 스코프에서 계속 사용할 경우, if문 복잡해져 가독성이 떨어질 때 - guard
