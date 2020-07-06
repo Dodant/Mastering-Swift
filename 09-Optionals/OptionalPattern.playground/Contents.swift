@@ -29,6 +29,12 @@ let a: Int? = 0
 
 let b: Optional<Int> = 0
 
+if a == nil { }
+if a == .none { }
+
+if a == 0 { }
+if a == .some(0) { }
+
 
 if let x = a {
    print(x)
@@ -37,7 +43,6 @@ if let x = a {
 if case .some(let x) = a {
    print(x)
 }
-
 
 if case let x? = a {
    print(x)
@@ -51,34 +56,7 @@ for item in list {
    print(x)
 }
 
-
 for case let x? in list {
    print(x)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

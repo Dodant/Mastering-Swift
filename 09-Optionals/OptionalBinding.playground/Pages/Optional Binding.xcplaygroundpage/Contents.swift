@@ -25,69 +25,44 @@ import Foundation
  # Optional Binding
  */
 
-
-
-
-
-
-
-
-
-
-
-
-
+var num: Int? = nil
+// print(num!)
 
 /*:
  ## Syntax
  ![optional-binding-syntax](optional-binding-syntax.png)
  */
 
+if num != nil { // 거의 이런식으로 사용하는 경우는 없음
+	print(num!)
+} else {
+	print("empty")
+}
+
+if let num = num {	// 왼쪽의 num은 임시상수
+	print(num)		// 가장 인접한 블록의 상수를 사용
+} else {
+	print("empty")
+}
 
 
+var str: String? = "str"
+guard let str = str else {
+	fatalError()
+}
+str
+
+num = 123
+if var num = num {
+	num = 456
+	print(456)
+}
+num
 
 
+let a: Int? = 12
+let b: String? = "str"
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if let num = a, let str = b, str.count > 5 { }
 
 

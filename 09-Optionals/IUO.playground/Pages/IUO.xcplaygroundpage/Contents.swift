@@ -27,8 +27,10 @@ import Foundation
  ![iuo](iuo.png)
  */
 
+let num: Int! = 12
+let a = num
+a	// Int?
 
-
-
-
+let b: Int = num
+b	// Int
 

@@ -22,18 +22,26 @@
 import UIKit
 
 struct Contacts {
-   var email: [String: String]
-   var address: String
+   var email: [String: String]?
+   var address: String?
+	
+	func printAddress() {
+		print(address ?? "no address")
+	}
 }
 
 struct Person {
    var name: String
-   var contacts: Contacts
+   var contacts: Contacts?
 
    init(name: String, email: String) {
       self.name = name
       contacts = Contacts(email: ["home": email], address: "Seoul")
    }
+	
+	func getContacts() -> Contacts? {
+		return contacts
+	}
 }
 
 
@@ -41,26 +49,36 @@ struct Person {
  # Optional Chaining
  */
 
+var p = Person(name: "Harry", email: "swift@example.com")
+let a = p.contacts?.address
+a
+
+var optionalP: Person? = Person(name: "Harry", email: "swift@example.com")
+let b = optionalP?.contacts?.address
+b
+
+optionalP = nil
+let c = optionalP?.contacts?.address
+c
+
+p.contacts?.address?.count
+
+p.getContacts()?.address
+
+let f: (() -> Contacts?)? = p.getContacts
+f?()?.address
+
+let d = p.getContacts()?.printAddress()
+if p.getContacts()?.printAddress() != nil { }
+if let _ = p.getContacts()?.printAddress() { }
 
 
+let e = p.contacts?.email?["home"]
+p.contacts?.email?["home"]?.count
 
 
+p.contacts?.address = "Daegu"
+p.contacts?.address
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+optionalP?.contacts?.address = "Daegu"
+optionalP?.contacts?.address

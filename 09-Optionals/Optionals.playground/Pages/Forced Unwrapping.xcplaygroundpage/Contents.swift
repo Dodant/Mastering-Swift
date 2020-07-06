@@ -28,26 +28,29 @@ import Foundation
  # Unwrapping
  */
 
+var num: Int? = nil
+print(num)
 
-
-
-
-
-
-
-
+num = 123
+print(num)
+print(num!)
 
 /*:
  ## Forced Unwrapping
  ![forced-unwrapping](forced-unwrapping.png)
  */
 
+num = nil
+// print(num!) // Fatal error: Unexpectedly found nil while unwrapping an Optional value
 
+if num != nil {
+	print(nil!)
+}
 
+num = 123
+let before = num
+let after = num!
 
-
-
-
-
-
+before
+after
 

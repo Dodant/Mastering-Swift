@@ -25,28 +25,18 @@ import UIKit
  # Optionals
  */
 
-
-
-
-
-
-
-
-
-
-
-
-
+let optionalNum: Int? = nil
+// let optionalNum = nil 	- Error
 
 /*:
  ## Optional Type
  ![optional-type-syntax](optional-type-syntax.png)
  */
 
+let str: String = "Swift"
+let optionalStr: String? = nil
 
-
-
-
-
-
+let a: Int? = nil
+let b = a
+b
 //: [Next](@next)
