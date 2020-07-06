@@ -25,31 +25,43 @@ import UIKit
  # break
  */
 
+let num = 2
+
+switch num {
+case 1...10:
+	print("begin block")
+	
+	if num % 2 != 0{
+		break
+	}
+	
+	print("end block")
+default:
+	break
+}
+
+print("done")
 
 
 
+for index in 1...10 {
+	print(index)
+	
+	if index > 1 {
+		break
+	}
+}
 
 
 
+for i in 1...10 {
+	print("OTER LOOP", i)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	for j in 1...10 {
+		print("   inner loop", j)
+		
+		if j > 1{
+			break
+		}
+	}
+}

@@ -29,7 +29,15 @@ import UIKit
  ![usinglabel](usinglabel.png)
  */
 
-
+outer : for i in 1...3 {
+	print("outer loop", i)
+	
+	inner : for j in 1...3 {
+		print("   inner loop", j)
+		
+		break outer
+	}
+}
 
 
 
