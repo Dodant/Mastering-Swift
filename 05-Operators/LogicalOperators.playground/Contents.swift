@@ -46,6 +46,8 @@ true && true
 true && false
 false && true
 false && false
+
+// 앞이 false면 false
 /*:
  ## Logical OR Operators
  ````
@@ -58,3 +60,5 @@ true || true
 true || false
 false || true
 false || false
+
+// 앞이 true면 true

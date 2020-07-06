@@ -33,7 +33,7 @@ Int8.max
  a &+ b
  ````
  */
-// 한정된 메모리 공간안에서
+// 한정된 메모리 공간 안에서
 let a: Int8 = Int8.max
 let b: Int8 = a &+ 1
 /*:

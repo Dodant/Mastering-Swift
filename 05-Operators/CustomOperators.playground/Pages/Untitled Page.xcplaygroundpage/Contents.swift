@@ -96,6 +96,7 @@ if 2 ** 10 == 1024 {
    validCount += 1
 }
 
+
 print(validCount)
 
 

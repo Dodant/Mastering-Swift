@@ -19,6 +19,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
+
 //: [Previous](@previous)
 
 import Foundation
@@ -38,3 +39,5 @@ a >> 2
  ## Arithmetic Shift
  ![ashift](ashift.png)
  */
+//:
+

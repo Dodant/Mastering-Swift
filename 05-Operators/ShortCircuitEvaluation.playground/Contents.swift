@@ -32,6 +32,7 @@ b
 
 
 // 값이 변경되는 것 = Side Effect
+// Refactoring
 let resultA = updateLeft()
 let resultB = updateRight()
 

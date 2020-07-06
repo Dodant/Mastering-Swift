@@ -46,8 +46,6 @@ a += b
  ````
  */
 
-
-
 /*:
  ## Multiplication Assignment Operator
  ````
@@ -55,8 +53,6 @@ a += b
  a = a * b
  ````
  */
-
-
 
 /*:
  ## Division Assignment Operator
@@ -66,8 +62,6 @@ a += b
  ````
  */
 
-
-
 /*:
  ## Modulo Assignment Operator
  ````
@@ -75,7 +69,6 @@ a += b
  a = a % b
  ````
  */
-
 
 /*:
  ## Bitwise AND Assignment Operator
@@ -85,8 +78,6 @@ a += b
  ````
  */
 
-
-
 /*:
  ## Bitwise OR Assignment Operator
  ````
@@ -94,8 +85,6 @@ a += b
  a = a | b
  ````
  */
-
-
 
 /*:
  ## Bitwise XOR Assignment Operator
@@ -105,8 +94,6 @@ a += b
  ````
  */
 
-
-
 /*:
  ## Bitwise Left Shift Assignment Operator
  ````
@@ -115,8 +102,6 @@ a += b
  ````
  */
 
-
-
 /*:
  ## Bitwise Right Shift Assignment Operator
  ````
@@ -124,7 +109,3 @@ a += b
  a = a >> b
  ````
  */
-
-
-
-

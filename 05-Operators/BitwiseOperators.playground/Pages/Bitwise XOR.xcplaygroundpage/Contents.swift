@@ -30,7 +30,7 @@ import Foundation
  ````
  ![xor](xor.png)
  */
-// 두 비트가 달라야 1
+// 두 비트가 다르면 1, 같으면 0
 let a: UInt8 = 0b0010_0010
 let b: UInt8 = 0b1100_1110
 

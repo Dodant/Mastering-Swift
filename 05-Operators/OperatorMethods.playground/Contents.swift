@@ -37,10 +37,10 @@ struct Point {
 let p1 = Point(x: 12, y: 34)
 let p2 = Point(x: 67, y: 89)
 
-extension Point: Equatable {
-//	static func ==(lhs: Point, rhs: Point) -> Bool{
-//		return (lhs.x == rhs.x) && (lhs.y == rhs.y)
-//	}
+extension Point: Equatable {	// Equatable은 프로토콜
+	static func ==(lhs: Point, rhs: Point) -> Bool{
+		return (lhs.x == rhs.x) && (lhs.y == rhs.y)
+	}
 }
 
 p1 == p2
@@ -91,6 +91,7 @@ p7
 
 
 
+// example
 
 let a = 1
 let b = 2.3
