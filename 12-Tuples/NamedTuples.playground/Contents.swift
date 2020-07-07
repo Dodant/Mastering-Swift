@@ -28,24 +28,6 @@ import UIKit
  */
 
 let data = ("<html>", 200, "ok", 12.34)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let named = (body: "<hmtl>", statusCode: 200, statusMessage: "OK", dataSize: 12.34)
+named.1
+named.statusCode

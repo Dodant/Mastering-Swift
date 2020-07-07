@@ -28,34 +28,23 @@ import UIKit
  ![tuple-expr](tuple-expr.png)
  */
 
+let i = 12 		// Scalar Type
+let j = (12,34)	// Compound Type
 
-
-
-
-
-
-
-
-
+let data = ("<html>", 200, "OK", 12.34)
 
 /*:
  ## Explicit Member Expression
  ![eme](eme.png)
  */
 
+data.0
+data.1
+data.2
+data.3
 
+// let -> Immutable Tuple
+// var -> Mutable Tuple
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+var mutableTuple = data
+mutableTuple.1 = 404
