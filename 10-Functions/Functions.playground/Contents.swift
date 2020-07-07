@@ -24,34 +24,22 @@ import UIKit
 /*:
  # Functions
  */
-
+// Reusability
+// Swift Standard Library
 /*:
  ## Calling Functions
  ![call](call.png)
  */
 
-
-
-
-
-
-
-
-
-
+print("hello")
 
 /*:
  ## Defining Functions
  ![define](define.png)
  */
 
+func sayHello() {
+	print("Hello, World")
+}
 
-
-
-
-
-
-
-
-
-
+sayHello()

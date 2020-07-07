@@ -26,27 +26,15 @@ import UIKit
  ![variadic](variadic.png)
  */
 
+print("Hello")
+print("Hello", "Swift")	// parameter는 하나
 
+func printSum(of nums: Int...) { // 가변 파라미터는 하나만 존재, 디폴트값을 가질 수 없음
+	var sum = 0
+	for i in nums {
+		sum += i
+	}
+	print(sum)
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+printSum(of: 1,2,3,4,5)

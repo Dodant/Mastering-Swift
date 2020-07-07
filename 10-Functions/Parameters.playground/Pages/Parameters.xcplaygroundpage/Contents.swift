@@ -26,63 +26,29 @@ import UIKit
  ![define](define.png)
  ![param](param.png)
  */
+// Formal parameter
+// Actual parameter, Argument
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+func add(a: Int, b: Int) -> Int {	// 임시상수
+	return a + b
+}
 
 /*:
  ## Calling Functions
  ![call](call.png)
  */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+add(a: 3, b: 4)
+add(a: 3, b: 4 + 6)
 
 /*:
  ## Default Value
  ![defval](defval.png)
  */
 
+func sayHello(to: String = "Stranger") {
+	print("Hello, \(to)")
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+sayHello(to: "Swift")
+sayHello()

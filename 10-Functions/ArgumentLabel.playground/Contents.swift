@@ -23,27 +23,32 @@ import UIKit
 
 /*:
  # Argument Label
- */
-
-func sayHello(name: String) {
-   print("Hello, \(name)")
-}
-
-sayHello(name: "Swift")
-
-
-
-
-
-
-
-
-
-
-/*:
  ## Syntax
  ![arg1](arg1.png)
  ![arg2](arg2.png)
  */
 
+func sayHello(name: String) {	// name - Parameter Name
+   print("Hello, \(name)")
+} // sayHello(name:)
 
+sayHello(name: "Swift")			// name - Argument Label
+
+
+func sayHello(to name: String) {
+	print("Hello, \(name)")
+} // sayHello(to:)
+
+sayHello(to: "Swift")
+
+
+func sayHello(_ name: String) {
+	print("Hello, \(name)")
+}
+
+sayHello("Swift")
+
+// Nameing Convention
+// Function Name - 동사
+// Argument Label - to, in, with과 같은 전치사
+// Parameter - 명사

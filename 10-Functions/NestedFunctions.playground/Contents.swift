@@ -25,7 +25,18 @@ import UIKit
  # Nested Functions
  */
 
+func outer() -> () -> (){
+	func inner() {
+		print("inner")
+	}
+	inner()
+	print("outer")
+	
+	return inner
+}
 
+let f = outer()
+f()
 
 
 

@@ -26,20 +26,81 @@ import UIKit
  ![ftype](ftype.png)
  */
 
+func sayHello() {
+	print("Hello, Swift")
+}
+
+let f1 = sayHello	// () -> ()
+f1()
 
 
+func printHello(with name: String) {
+	print("Hello, \(name)")
+}
+
+let f2: (String) -> () = printHello(with:)
+let f3 = printHello(with:)
+f3("World")
+// f3(with: "World") Error
 
 
+func add(a: Int, b: Int ) -> Int {
+	return a + b
+}
+
+var f4: (Int, Int) -> Int = add(a:b:)
+f4(1,2)
 
 
+func add(_ a: Int, with b: Int) -> Int {
+	return a + b
+}
+f4 = add(_:with:)
 
 
+func swapNumbers(_ a: inout Int, _ b: inout Int){ }
+let f5 = swapNumbers(_:_:)
+f5
+
+func sum(of numbers: Int...){ }
+let f6 = sum(of:)
+f6
 
 
+func add(_ a: Int, _ b: Int) -> Int {
+	return a + b
+}
 
+func subtrack(_ a:Int, _ b: Int) -> Int {
+	return a - b
+}
 
+func multiply(_ a:Int, _ b: Int) -> Int {
+	return a * b
+}
 
+func divide(_ a:Int, _ b: Int) -> Int {
+	return a / b
+}
 
+typealias ArithmeticFunction = (Int, Int) -> Int
 
+func selectFunction(from op: String) -> ArithmeticFunction? {
+	switch op {
+	case "+":
+		return add(_:_:)
+	case "-":
+		return subtrack(_:_:)
+	case "*":
+		return multiply(_:_:)
+	case "/":
+		return divide(_:_:)
+	default:
+		return nil
+	}
+}
 
+let af = selectFunction(from: "+")
+af?(1,2)
 
+selectFunction(from: "*")?(12,34)
