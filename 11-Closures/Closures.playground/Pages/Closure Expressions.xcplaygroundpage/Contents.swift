@@ -28,17 +28,29 @@ import UIKit
  ![closure](closure.png)
  */
 
+// Closure - 익명함수
+
+let c = { print("Hello, Swift") }
+c()
 
 
+let c2 = { (str:String) -> String in	// Argument Label을 사용하지 않음
+	return "Hello, \(str)"
+}
+let result = c2("Closure")
+print(result)
 
 
+typealias SimpleStringClosure = (String) -> String
+
+func perform(closure: SimpleStringClosure) {
+	print(closure("iOS"))
+}
+
+perform(closure: c2)
 
 
-
-
-
-
-
-
-
+perform(closure: { (str: String) -> String in	// inline closure
+	return "Hi, \(str)"
+})
 //: [Next](@next)

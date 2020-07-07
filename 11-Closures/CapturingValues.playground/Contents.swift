@@ -25,28 +25,13 @@ import UIKit
  # Capturing Values
  */
 
+var num = 0
+let c = {
+	num += 1
+	print("check point #1: \(num)")
+}
+c()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print("check point #2: \(num)")
+// 클로저에서 값을 캡처하면 값에 대한 참조를 획득한다.
+// 클로저 내부에서 값을 변경했을 때 바뀐 값을 그대로 적용된다.

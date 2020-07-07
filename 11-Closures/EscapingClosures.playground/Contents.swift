@@ -25,39 +25,29 @@ import UIKit
  # Escaping Closure
  */
 
+func performNonEscaping(closure: () -> ()){
+	print("Start")
+	closure()
+	print("End")
+}
 
+performNonEscaping {
+	print("closure")
+}
 
+func performEscaping(closure: @escaping () -> ()) {
+	print("Start")
+	
+	var a = 12
+	
+	DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+		closure()
+		print(a)
+	}
+	print("End")
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+performEscaping {
+	print("closure")
+}
 

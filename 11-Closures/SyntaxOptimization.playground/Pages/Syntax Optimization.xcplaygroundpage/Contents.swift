@@ -34,6 +34,32 @@ let products = [
    "Apple Watch Series 4", "Apple Watch Nike+"
 ]
 
+var proModels = products.filter({ (name: String) -> Bool in
+	return name.contains("Pro")
+})
+
+products.filter { $0.contains("Pro") }	// Implicit Return & Trailing Closure
 
 
+proModels.sort(by: { (lhs: String, rhs: String) -> Bool in
+	return lhs.caseInsensitiveCompare(rhs) == .orderedAscending
+})
+
+proModels.sort { $0.caseInsensitiveCompare($1) == .orderedAscending }
+
+
+// Challenge
+proModels.contains(where: { (str: String) -> Bool in
+	return str == "iMac Pro"
+})
+
+proModels.contains { $0 == "iMac Pro" }
+
+
+
+// 1. 파라미터 형식과 리턴 형식을 생략한다.
+// 2. 파라미터 이름을 생략하고 Shorthand Argument Name으로 대체한다.
+// 3. 클로저에 포함된 코드가 단일리턴문이라면 리턴 키워드를 생략한다. - Implicit Return
+// 4. 클로저가 마지막 파라미터라면 Trailing Closure로 작성한다. Argument Label이 남아있다면 삭제한다.
+// 5. 괄호 사이에 파라미터가 더이상 없다면 괄호를 생략한다.
 
