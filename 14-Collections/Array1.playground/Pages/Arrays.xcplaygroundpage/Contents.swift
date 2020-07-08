@@ -23,22 +23,14 @@
 /*:
  # Array
  */
-
+// Ordered Collection
+// 0-based Index
 /*:
  ## Array Literal
  ![array-literal](array-literal.png)
  */
 
-
-
-
-
-
-
-
-
-
-
+let nums = [1,2,3]
 
 /*:
  ## Array Type
@@ -46,20 +38,7 @@
  ![array-type2](array-type2.png)
  */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let strArray: Array<String>
+let strArray2: [String]
 
 //: [Next](@next)

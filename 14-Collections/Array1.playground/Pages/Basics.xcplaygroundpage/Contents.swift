@@ -28,42 +28,42 @@ import Foundation
  ## Creating an Array
  */
 
+let nums = [1,2,3]
 
+let emptyArray: [Int] = []
+let emptyArray2 = Array<Int>()
+let emptyArray3 = [Int]()
 
-
-
-
-
-
-
-
-
-
-
+let zeroArray = [Int](repeating: 0, count: 10)
 
 /*:
  ## Inspecting an Array
  */
 
+nums.count
+nums.count == 0
+nums.isEmpty
 
-
-
-
-
-
+emptyArray.isEmpty
 
 /*:
  ## Accessing Elements
  */
 
+let fruits = ["Apple", "Banana", "Melon"]
+fruits[0]
+fruits[1]
+fruits[2]
 
+fruits[0...1]
+fruits[fruits.startIndex]
+fruits[fruits.endIndex - 1]
+fruits[fruits.index(before: fruits.endIndex)]
 
+fruits.first!
+fruits.last!
 
+emptyArray.first
+emptyArray.last
 
-
-
-
-
-
-
-
+emptyArray[0]

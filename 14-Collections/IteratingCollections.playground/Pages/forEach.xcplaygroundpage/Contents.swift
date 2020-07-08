@@ -27,11 +27,45 @@ import Foundation
  ## forEach
  */
 
+print("Array","======================")
+let arr1 = [1,2,3]
+arr1.forEach { (num) in
+	print(num)
+}
+
+print("Set", "========================")
+let set1: Set = [1,2,3]
+set1.forEach { (num) in
+	print(num)
+}
+
+print("Dictionary", "=================")
+let dict1 = ["A":1, "B":2, "C":3]
+dict1.forEach { (elem) in
+	print(elem.value, elem.value)
+}
 
 
+func withForIn(){
+	print(#function)
+	let arr = [1,2,3]
+	for num in arr {
+		// break, continue 사용 가능
+		print(num)
+		return
+	}
+}
+
+func withForeach(){
+	print(#function)
+	let arr = [1,2,3]
+	arr.forEach { (num) in
+		// break, continue 사용 불가능
+		print(num)
+		return	// 현재 실행중인 클로저만 종료시킬 뿐
+	}
+}
 
 
-
-
-
-
+withForIn()
+withForeach()

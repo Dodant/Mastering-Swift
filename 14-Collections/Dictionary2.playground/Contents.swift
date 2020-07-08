@@ -25,46 +25,33 @@ import UIKit
  # Adding Keys and Values
  */
 
+var words = [String: String]()
+words["A"] = "Apple"
+words["B"] = "Banana"
+
+words.count
+words
+
+words["B"] = "Ball"
+words
 
 
+words.updateValue("City", forKey: "C")
+words.updateValue("Circle", forKey: "C")
 
-
-
-
-
-
-
-
-
-
-
+// Insert + Update = Upsert
 
 /*:
  # Removing Keys and Values
  */
 
+words
+words["B"] = nil
+words
 
+words["Z"] = nil
+words
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+words.removeValue(forKey: "A")
+words.removeValue(forKey: "A")
+words.removeAll()
