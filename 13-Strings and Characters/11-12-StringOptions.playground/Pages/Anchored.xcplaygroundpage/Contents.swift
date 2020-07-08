@@ -27,20 +27,41 @@ import Foundation
  # Anchored Option
  */
 
+let str = "Swift Programming"
+
+if let result = str.range(of: "Swift") {
+	print(str.distance(from: str.startIndex, to: result.lowerBound))
+} else {
+	print("not found")
+}
+
+if let result = str.range(of: "Swift", options: [.backwards]) {
+	print(str.distance(from: str.startIndex, to: result.lowerBound))
+} else {
+	print("not found")
+}
+
+if let result = str.range(of: "Swift", options: [.anchored]) {
+	print(str.distance(from: str.startIndex, to: result.lowerBound))
+} else {
+	print("not found")
+}
+
+if let result = str.range(of: "Swift", options: [.anchored, .backwards]) {
+	print(str.distance(from: str.startIndex, to: result.lowerBound))
+} else {
+	print("not found")
+}
+
+str.lowercased().hasPrefix("swift")
+if let _ = str.range(of: "swift", options: [.anchored, .caseInsensitive]) {
+	print("Same Prefix")
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+str.hasSuffix("Programming")
+if let _ = str.range(of: "Programming", options: [.anchored, .caseInsensitive, .backwards]) {
+	print("Same Suffix")
+}
 
 //: [Next](@next)

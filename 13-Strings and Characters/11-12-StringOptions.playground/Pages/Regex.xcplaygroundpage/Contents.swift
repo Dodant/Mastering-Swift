@@ -27,19 +27,23 @@ import Foundation
  # Regular Expression
  */
 
+let emailPattern = "([0-9a-zA-Z_-]+)@([0-9a-zA-Z_-]+)(\\.[0-9a-zA-Z_-]+){1,2}"
+let emailAddress = "user@example.com"
 
+if let _ = emailAddress.range(of: emailPattern) {
+	print("found")
+} else {
+	print("not found")
+}
 
+if let _ = emailAddress.range(of: emailPattern, options: [.regularExpression]) {
+	print("found")
+} else {
+	print("not found")
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-//: [Next](@next)
+if let range = emailAddress.range(of: emailPattern, options: [.regularExpression]), (range.lowerBound, range.upperBound) == (emailAddress.startIndex, emailAddress.endIndex) {
+	print("found")
+} else {
+	print("not found")
+}

@@ -25,18 +25,17 @@ import UIKit
  # Appending Strings and Characters
  */
 
+var str = "Hello"
+str.append(", ")				// return void - 그냥 동사로 되어있다면 본래의 값을 바꾸고 값을 리턴하지 않는다.
+str
+
+let s = str.appending("Swift")	// return string
+str
+s
+s.appending("!!")
+//s.append("!!") - Error
 
 
-
-
-
-
-
-
-
-
-
-
-
+"File size is ".appendingFormat("%.1f", 12.3456)
 
 //: [Next](@next)

@@ -25,20 +25,22 @@ import UIKit
  # String Indices
  */
 
+let str = "Swift"
+let fisrtCh = str[str.startIndex]
+
+let lastCharIndex = str.index(before: str.endIndex)
+let lastCh = str[lastCharIndex]
+
+let secondCharIndex = str.index(after: str.startIndex)
+let secondCh = str[secondCharIndex]
+
+var thirdCharIndex = str.index(str.startIndex, offsetBy: 2)
+var thirdCh = str[thirdCharIndex]
+
+thirdCharIndex = str.index(str.endIndex, offsetBy: -3)
+thirdCh = str[thirdCharIndex]
 
 
+if thirdCharIndex < str.endIndex && thirdCharIndex >= str.startIndex { }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+str.range(of: "ft")?.lowerBound

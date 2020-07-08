@@ -27,9 +27,10 @@ import Foundation
  # Inserting Characters
  */
 
+var str1 = "Hello Swift"
+str1.insert(contentsOf: ",", at: str1.index(str1.startIndex, offsetBy: 5))
 
-
-
-
-
-
+if let sIndex = str1.firstIndex(of: "S") {
+	str1.insert(contentsOf: "Awesome ", at: sIndex)
+}
+str1

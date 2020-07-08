@@ -26,7 +26,29 @@ import Foundation
  # Replacing Substrings
  */
 
+var str = "Hello, Objective-C"
+
+if let range = str.range(of: "Objective-C") {
+	str.replaceSubrange(range, with: "Swift")
+}
+
+str
 
 
+if let range = str.range(of: "Hello") {
+	let s = str.replacingCharacters(in: range, with: "Hi")
+	s
+	str
+}
+
+
+var s = str.replacingOccurrences(of: "Swift", with: "Awesome Swift")
+s
+
+s = str.replacingOccurrences(of: "swift", with: "Awesome swift")	// 여러개를 한꺼번에 바꾸고 싶을때
+s
+
+s = str.replacingOccurrences(of: "swift", with: "Awesome swift", options: [.caseInsensitive])
+s
 
 //: [Next](@next)

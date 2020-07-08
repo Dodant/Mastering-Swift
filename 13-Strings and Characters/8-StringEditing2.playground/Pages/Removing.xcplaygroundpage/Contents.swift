@@ -19,6 +19,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
+
 //: [Previous](@previous)
 
 import Foundation
@@ -27,16 +28,44 @@ import Foundation
  # Removing Substrings
  */
 
+var str = "Hello, Awesome Swift!!!"
+let lastCharIndex = str.index(before: str.endIndex)
+var removed = str.remove(at: lastCharIndex)
+removed
+str
+
+removed = str.removeFirst()
+removed
+str
+
+str.removeFirst(2)
+str
+
+str.removeLast()
+str
+
+str.removeLast(2)
+str
+
+
+if let range = str.range(of: "Awesome") {
+	str.removeSubrange(range)
+	str
+}
+
+str.removeAll()
 
 
 
 
+str = "Hello, Awesome Swift!!!"
+var substr = str.dropLast()	// 새로운 메모리 공간이 생성된 것이 아님
+substr = str.dropLast(3)
 
-
-
-
-
-
+substr = str.drop(while: { (ch) -> Bool in
+	return ch != ","
+})
+substr
 
 
 

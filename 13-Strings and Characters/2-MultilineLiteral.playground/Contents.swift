@@ -25,28 +25,13 @@ import UIKit
  # Multiline String Literal
  */
 
+let loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." 	// Singleline
 
+let multiline = """
+Lorem ipsum dolor sit amet, \
+	consectetur adipiscing elit,
+		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+"""
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+print(multiline)
 
