@@ -26,37 +26,37 @@ import UIKit
  ![enum](enum.png)
  */
 
+let left = "left"
+let center = "center"
+let right = "right"
 
+var alignment = center
 
-
-
-
-
-
-
+if alignment == "Center" { }
 
 /*:
  ## Syntax
  ![syntax](enum-syntax.png)
  */
 
+enum Alignment {
+	case left
+	case center
+	case right
+}
 
+Alignment.center
 
+var textAlignment = Alignment.center
+textAlignment = .right		// 열거형은 생략해도 되나, .은 생략하면 안된다.
 
+if textAlignment == .center { }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+switch textAlignment {		// 주로 switch문 사용
+case .left:
+	print("Left")
+case .center:
+	print("Center")
+case .right:
+	print("Right")
+}

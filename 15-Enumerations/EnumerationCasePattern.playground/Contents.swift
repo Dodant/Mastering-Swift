@@ -26,13 +26,54 @@ import UIKit
  ![enum-case](enum-case.png)
  */
 
+enum Transportation {
+	case bus(number: Int)
+	case taxi(company: String, number: String)
+	case subway(linenumber: Int, express: Bool)
+}
 
+var tpt = Transportation.bus(number: 7)
 
+switch tpt {
+case .bus(let n):
+	print(n)
+case .taxi(let c, var n):
+	print(c, n)
+case let .subway(l, e):
+	print(l, e)
+}
 
+tpt = Transportation.subway(linenumber: 2, express: false)
+if case let .subway(2, express) = tpt {
+	if express {
+		
+	} else {
+		
+	}
+}
 
+if case .subway(_, true) = tpt {
+	print("Express")
+}
 
+let list = [
+	Transportation.subway(linenumber: 2, express: false),
+	Transportation.bus(number: 4412),
+	Transportation.subway(linenumber: 7, express: true),
+	Transportation.taxi(company: "Seoul", number: "1234")
+]
 
+for case let .subway(n, _) in list {
+	print("Subway \(n)")
+}
 
+for case let .subway(n, true) in list {
+	print("Subway \(n)")
+}
+
+for case let .subway(n, _) in list where n == 2 {
+	print("Subway \(n)")
+}
 
 
 
