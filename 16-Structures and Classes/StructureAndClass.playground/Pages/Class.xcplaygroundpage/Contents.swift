@@ -28,27 +28,20 @@ import Foundation
  ![Class](class.png)
  */
 
+class Person {
+	var name = "John Doe"
+	var age = 0
 
+	func speak(){
+		print("Hello")
+	}
+}
 
+let p = Person()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//						struct			class
+// Type					Value Type		Reference Type
+// Deinitializer		x				o
+// Inheritance			x				o
+// Reference Counting	x				o
+//						stack			heap

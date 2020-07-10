@@ -26,23 +26,18 @@ import UIKit
  ![Struct](struct.png)
  */
 
+struct Person {
+	var name: String
+	var age: Int
+	
+	func speak(){
+		print("Hello")
+	}
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let p = Person(name: "Steve", age: 50)
+p.name
+p.age
+p.speak()
 
 //: [Next](@next)

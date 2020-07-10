@@ -26,12 +26,17 @@ import UIKit
  ![identity-op](identity-op.png)
  */
 
+// 항등 연산자 ===, !== - 주소가 동일한 경우, 다른 경우
 
+class A { }
 
+let a = A()
+let b = a
+let c = A()
 
+a === b
+a === c
+a !== c
 
-
-
-
-
-
+// Same Memory Address => Identical
+// Same Value => Equal
