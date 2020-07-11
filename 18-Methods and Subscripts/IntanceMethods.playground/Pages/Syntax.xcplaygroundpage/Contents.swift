@@ -27,29 +27,50 @@ import UIKit
  ![Call Method](call-method.png)
  */
 
+class Sample {
+	var data = 0
+	static var sharedData = 123
+	
+	func doSomething() {
+		print(data)
+		// sharedData
+		Sample.sharedData
+	}
+	
+	func call(){
+		doSomething()
+	}
+}
+
+let a = Sample()
+a.data
+a.doSomething()
+a.call()
 
 
+class Size {
+	var width = 0.0
+	var height = 0.0
+	
+	func enlarge() {
+		width += 1.0
+		height += 1.0
+	}
+}
+
+let s = Size()
+s.enlarge()
 
 
+struct SizeS {
+	var width = 0.0
+	var height = 0.0
+	
+	mutating func enlarge() {
+		width += 1.0
+		height += 1.0
+	}
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+var ss = SizeS()
+ss.enlarge()
