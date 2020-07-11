@@ -67,39 +67,53 @@ class Circle: Figure {
    }
 }
 
-
-
 /*:
  ## Type Check Operator
  ![type-check](type-check.png)
  */
 
+let num = 123
+num is Int
+num is Double
 
+let t = Triangle(name: "Triangle")
+let r = Rectangle(name: "Rectangle")
+let s = Square(name: "Square")
+let c = Circle(name: "Circle")
 
-
-
-
-
-
-
-
-
-
+r is Rectangle
+r is Figure
+r is Square
 
 /*:
  ## Type Casting Operator
  ![type-casting](type-casting.png)
  */
 
+let nsstr = "str" as NSString
+nsstr
 
+t as? Triangle
+t as! Triangle
 
+var upcasted: Figure = s
+upcasted = s as Figure
 
+upcasted as? Square
+upcasted as! Square
+upcasted as? Rectangle
+upcasted as! Rectangle
 
+upcasted as? Circle
+// upcasted as! Circle - Error
 
+if let c = upcasted as? Circle { }
 
+let list = [t,r,s,c]	// [Figure]
 
-
-
-
-
-
+for item in list {		// 다형성
+	item.draw()
+	if let c = item as? Circle {
+		print(c.radius)
+	}
+}

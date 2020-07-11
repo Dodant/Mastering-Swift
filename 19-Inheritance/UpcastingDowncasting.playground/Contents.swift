@@ -51,10 +51,26 @@ class Square: Rectangle {
    
 }
 
+let f = Figure(name: "Unknown")
+f.name
 
+let r = Rectangle(name: "Rect")
+r.width
+r.height
+r.name
 
+let s: Figure = Square(name: "Square") 	// Upcasting, 안전, 항상 성공
+//s.width
+//s.height
+s.name
 
+let downcastedS = s as! Rectangle
+downcastedS.name
+downcastedS.width
+downcastedS.height
 
+class Rhombus: Square {
+	var angle = 45.0
+}
 
-
-
+// let dr = s as! Rhombus - Error

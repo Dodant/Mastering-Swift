@@ -22,40 +22,57 @@
 import UIKit
 
 /*:
- # Overriding
- */
-
+# Overriding
+*/
+// methods, properties, subscripts, initializers
 
 class Figure {
-   var name = "Unknown"
-
-   init(name: String) {
-      self.name = name
-   }
-
-   func draw() {
-      print("draw \(name)")
-   }
+	var name = "Unknown"
+	
+	init(name: String) {
+		self.name = name
+	}
+	
+	func draw() {
+		print("draw \(name)")
+	}
 }
 
 class Circle: Figure {
-   var radius = 0.0
+	final var radius = 0.0
+	var diameter: Double {
+		return radius * 2
+	}
+	override func draw() {
+		super.draw()
+		print("🐭 \(name)")
+	}
 }
 
 let c = Circle(name: "Circle")
 c.draw()
 
 
+class Oval: Circle {
+//	override var diameter: Double {	// self 접근 X
+//		willSet {
+//			print(newValue)
+//		}
+//		didSet {
+//			print(oldValue)
+//		}
+//	}
+	
+//	override var radius: Double {
+//		willSet {
+//			print(newValue)
+//		}
+//		didSet {
+//			print(oldValue)
+//		}
+//	}
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+let o = Oval(name: "Oval")
+o.radius
+o.draw()

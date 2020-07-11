@@ -26,21 +26,35 @@ import UIKit
  ![inheritance](inheritance.png)
  */
 
+class Figure {
+	var name = "Unknown"
+	
+	init(name: String) {
+		self.name = name
+	}
+	
+	func draw() {
+		print("Draw \(name)")
+	}
+}
 
+class Circle: Figure {
+	var radius = 0.0
+}
 
-
-
-
+let c = Circle(name: "Circle")
+c.radius
+c.name
+c.draw()
 
 /*:
  ## final class
  ![final class](final-class.png)
  */
 
+class Rectangle: Figure {
+	var width = 0.0
+	var height = 0.0
+}
 
-
-
-
-
-
-
+final class Square: Rectangle { } 	// 상속이 금지

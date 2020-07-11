@@ -26,33 +26,32 @@ import Foundation
  # Any, AnyObject
  */
 
+var data: Any = 1		// 참조형식, 값형식 둘다 가능
+data = 2.3
+data = "str"
+data = [1, 2, 3]
+data = NSString()
 
+var obj: AnyObject = NSString()
+//obj = 1
 
-
-
-
-
-
-
-
-
+if let str = data as? String {
+	print(str.count)
+} else if let list = data as? [Int] {
+	
+}
 
 /*:
  # Type Casting Pattern
  */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+switch data {
+case let str as String:
+	print(str.count)
+case let list as [Int]:
+	print(list.count)
+case is Double:
+	print("Double Value")
+default:
+	break
+}
