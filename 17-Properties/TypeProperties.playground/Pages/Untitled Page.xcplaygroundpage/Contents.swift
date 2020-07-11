@@ -29,11 +29,13 @@ import UIKit
  ![type2](type2.png)
  */
 
+class Math {
+	static let pi = 3.14
+}
 
-
-
-
-
+let m = Math()
+// m.pi
+Math.pi		// 초기화 시점
 
 /*:
  ## Computed Type Properties
@@ -41,13 +43,15 @@ import UIKit
  ![type4](type4.png)
  */
 
+enum Weekday: Int {
+	case sun = 1, mon, tue, wed, thu, fri, sat
+	
+	static var today: Weekday {
+		let cal = Calendar.current
+		let today = Date()
+		let weekday = cal.component(.weekday, from: today)
+		return Weekday(rawValue: weekday)!
+	}
+}
 
-
-
-
-
-
-
-
-
-
+Weekday.today

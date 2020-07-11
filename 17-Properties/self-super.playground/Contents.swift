@@ -29,24 +29,41 @@ import UIKit
 class Size {
    var width = 0.0
    var height = 0.0
+	
+	func calcArea() -> Double {
+		return width * height
+	}
+	
+	var area: Double {
+		return calcArea()
+	}
+	
+	func update(width: Double, height: Double){
+		self.width = width
+		self.height = height
+	}
+	
+	func doSomethind() {
+		let c = { self.width * self.height}
+	}
+	
+	static let unit = ""
+	static func doSomething(){
+		// self.width
+		self.unit
+		unit
+	}
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+struct Size1 {
+    var width = 0.0
+    var height = 0.0
+	
+	mutating func reset(value: Double) {
+		self = Size1(width: value, height: value)
+	}
+}
 
 /*:
  # super

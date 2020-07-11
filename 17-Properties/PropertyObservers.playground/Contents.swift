@@ -27,6 +27,15 @@ import UIKit
  */
 
 class Size {
-   var width = 0.0
+	var width = 0.0 {
+		willSet {
+			print(width, "=>", newValue, "Will Set")
+		}
+		didSet {
+			print(oldValue, "=>", width, "Did Set")
+		}
+	}
 }
 
+let s = Size()
+s.width = 123
