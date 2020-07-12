@@ -22,8 +22,56 @@
 import UIKit
 
 /*:
- # Subscript Requirements
- ![subscript](subscript.png)
- */
+# Subscript Requirements
+![subscript](subscript.png)
+*/
+
+protocol List {
+	subscript(idx: Int) -> Int { get set }
+}
+
+struct DataStore: List {
+	subscript(idx: Int) -> Int {
+		get {
+			return 0
+		}
+		set {
+			
+		}
+	}
+}
 
 
+protocol Equatable {
+	static func ==(lhs: Self, rhs: Self) -> Bool
+	static func !=(lhs: Self, rhs: Self) -> Bool
+}
+
+struct Color : Equatable {
+	
+	
+	let red: Int
+	let green: Int
+	let blue: Int
+	
+	static var black: Color {
+		return Color(red: 0, green: 0, blue: 0)
+	}
+	
+	static var white: Color {
+		return Color(red: 255, green: 255, blue: 255)
+	}
+	
+	static func != (lhs: Color, rhs: Color) -> Bool {
+		return !(lhs.red == rhs.red && lhs.green == rhs.green && lhs.blue == rhs.blue)
+	}
+	
+	static func == (lhs: Color, rhs: Color) -> Bool {
+		return lhs.red == rhs.red && lhs.green == rhs.green && lhs.blue == rhs.blue
+	}
+}
+
+let b = Color.black
+let w = Color.white
+
+print(b == w)

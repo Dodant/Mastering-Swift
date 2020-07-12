@@ -30,5 +30,19 @@ protocol Figure {
     func draw()
 }
 
+extension Figure where Self: Equatable {
+	func draw() {
+		print("draw figure")
+	}
+}
 
+struct Rectangle: Figure, Equatable {
+	var name = " "
+	
+	func draw() {
+		print("draw Rectangle")
+	}
+}
 
+let r = Rectangle()
+r.draw()

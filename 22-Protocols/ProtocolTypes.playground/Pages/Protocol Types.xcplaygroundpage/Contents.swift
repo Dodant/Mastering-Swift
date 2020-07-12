@@ -40,12 +40,10 @@ class Size: Resettable {
    }
 }
 
-
-
-
-
-
-
-
+let s = Size()
+let r: Resettable = Size()
+// r.width
+r.reset()
+r
 
 //: [Next](@next)

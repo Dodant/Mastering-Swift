@@ -63,25 +63,11 @@ class Oval: Circle {
 
 let r: Resettable = Size()
 let p: Printable = Size()
-
+var rp: Resettable & Printable = Size()
 
 /*:
  ![composition2](composition2.png)
  */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+var cr: Circle & Resettable = Circle()
+cr = Oval()

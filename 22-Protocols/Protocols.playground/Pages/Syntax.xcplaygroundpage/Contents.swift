@@ -27,25 +27,30 @@ import UIKit
  ![protocol-inheritance](protocol-inheritance.png)
  */
 
-
-
-
-
+protocol Something {
+	func doSomething()
+}
 
 /*:
  # Adopting Protocols
  ![adopting](adopting.png)
  */
 
-
-
-
-
+struct Size: Something {
+	func doSomething() {
+		
+	}
+}
 
 /*:
  # Class-Only Protocols
  ![class-only](class-only.png)
  */
 
+protocol SomethingObject: AnyObject, Something { }
 
-
+class Object: SomethingObject {
+	func doSomething() {
+		
+	}
+}

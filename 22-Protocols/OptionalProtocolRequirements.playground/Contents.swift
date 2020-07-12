@@ -26,12 +26,20 @@ import UIKit
  ![optional](optional.png)
  */
 
-protocol Drawable {
-   var strokeWidth: Double { get set }
-   var strokeColor: UIColor { get set }
+@objc protocol Drawable {
+   @objc optional var strokeWidth: Double { get set }
+   @objc optional var strokeColor: UIColor { get set }
    func draw()
-   func reset()
+   @objc optional func reset()
 }
 
+class Rectangle: Drawable {
+	func draw() {
+	}
+}
 
-
+let r: Drawable = Rectangle()
+r.draw()
+r.strokeWidth
+r.strokeColor
+r.reset?()

@@ -45,9 +45,10 @@ class Size: Resettable {
 
 let s = Size()
 
+s is Resettable
+s is ExpressibleByNilLiteral
 
-
-
-
+let r = Size() as Resettable
+r as? Size
 
 //: [Next](@next)
