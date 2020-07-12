@@ -25,18 +25,63 @@ import UIKit
  # Adding Properties
  */
 
+// computed property만 가능
+
+extension Date {
+	var year: Int {
+		let cal = Calendar.current
+		return cal.component(.year, from: self)
+	}
+	
+	var month: Int {
+		let cal = Calendar.current
+		return cal.component(.month, from: self)
+	}
+}
+
+let today = Date()
+today.year
+today.month
+
+
+extension Double {
+	var radianValue: Double {
+		return (Double.pi * self) / 180.0
+	}
+	
+	var degreeValue: Double {
+		return self * 180.0 / Double.pi
+	}
+}
+
+let dv = 180.0
+dv.radianValue
+dv.radianValue.degreeValue
 
 
 
+extension Date {
+	var day: Int {
+		return Calendar.current.component(.day, from: self)
+	}
+	var month1: Int {
+		return Calendar.current.component(.month, from: self)
+	}
+	var yesterday: Date {
+		return self - TimeInterval(86400)
+    }
+}
 
+func solution(_ year:Int, _ month:Int, _ day:Int) -> [Int] {
+    let calendar = Calendar.current
+    var comps = DateComponents()
+    comps.year = year
+    comps.month = month
+    comps.day = day
 
-
-
-
-
-
-
-
-
-
-
+    let date = calendar.date(from: comps)!
+    let m = date.yesterday.month1
+    let d = date.yesterday.day
+    
+    return [m, d]
+}
