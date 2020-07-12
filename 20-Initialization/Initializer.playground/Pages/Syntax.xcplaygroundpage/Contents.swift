@@ -27,13 +27,13 @@ import UIKit
  ## Default Initializer
  */
 
+class Position {
+	var x = 0.0
+	var y = 0.0
+	var z: Double? = nil	// 자동으로 nil로 초기화
+}
 
-
-
-
-
-
-
+let p = Position()
 
 /*:
  ## Initializer Syntax
@@ -41,17 +41,30 @@ import UIKit
  ![call](call.png)
  */
 
-
-
-
-
-
-
+class SizeObj {
+	var width = 0.0
+	var height = 0.0
+	
+	init(width: Double, height: Double) {
+		self.width = width
+		self.height = height
+	}
+	
+	convenience init(value: Double) {
+//		width = value
+//		height = value
+		self.init(width: value, height: value)		// Initializer Delegation
+	}
+}
 
 /*:
  ## Memberwise Initializer
  */
 
+struct SizeValue {
+	var width = 0.0
+	var height = 0.0
+}
 
-
-
+let s = SizeValue()
+SizeValue(width: 1.2, height: 3.4)

@@ -24,33 +24,41 @@
 import Foundation
 
 /*:
- # Initializer Inheritance
- */
+# Initializer Inheritance
+*/
 class Figure {
-   var name: String
-
-   init(name: String) {
-      self.name = name
-   }
-
-   func draw() {
-      print("draw \(name)")
-   }
+	var name: String
+	
+	init(name: String) {
+		self.name = name
+	}
+	
+	convenience init(){
+		self.init(name: "Unknown")
+	}
+	
+	func draw() {
+		print("draw \(name)")
+	}
 }
 
 class Rectangle: Figure {
-   var width: Double
-   var height: Double
+	var width: Double = 0.0
+	var height: Double = 0.0
+	
+	init(name: String, width: Double, height: Double) {
+		self.width = width
+		self.height = height
+		super.init(name: name)
+	}
+	
+	override init(name: String) {
+		width = 0
+		height = 0
+		super.init(name: name)
+	}
+	
+	convenience init(){
+		self.init(name: "Unknown")
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-//: [Next](@next)

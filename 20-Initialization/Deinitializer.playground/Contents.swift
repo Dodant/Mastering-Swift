@@ -22,21 +22,28 @@
 import UIKit
 
 /*:
- # Deinitializer
- ![deinit](deinit.png)
- */
+# Deinitializer
+![deinit](deinit.png)
+*/
 
 class Size {
-   var width = 0.0
-   var height = 0.0
+	var width = 0.0
+	var height = 0.0
 }
 
 class Position {
-   var x = 0.0
-   var y = 0.0
+	var x = 0.0
+	var y = 0.0
 }
 
 class Rect {
-   var origin = Position()
-   var size = Size()
+	var origin = Position()
+	var size = Size()
+	
+	deinit {
+		print("deinit \(self)")
+	}
 }
+
+var r: Rect? = Rect()
+r = nil

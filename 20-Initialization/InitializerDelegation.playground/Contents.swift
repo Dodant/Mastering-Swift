@@ -22,38 +22,65 @@
 import UIKit
 
 /*:
- # Initializer Delegation
- 
- ## Value Type
- */
+# Initializer Delegation
+
+## Value Type
+*/
 
 struct Size {
-   var width: Double
-   var height: Double
-
-   init(w: Double, h: Double) {
-      width = w
-      height = h
-   }
-
-   init(value: Double) {
-      width = value
-      height = value
-   }
+	var width: Double
+	var height: Double
+	
+	init(w: Double, h: Double) {
+		width = w
+		height = h
+	}
+	
+	init(value: Double) {
+		self.init(w: value, h: value)
+	}
 }
 
-
 /*:
- ## Class
- */
+## Class
+*/
+// #1 Designated Initializer는 슈퍼클래스의 Designated Initializer를 호출해야한다. - Delegate Up
+// #2 Convenience Initializer는 같은 클래스에 있는 다른 Initializer를 호출해야한다. - Delegate Across
+// #3 Convenience Initializer를 호출했을 때 최종적으로 동일한 클래스에 있는 Designated Initializer가 호출되어야 한다.
 
+class Figure {
+	let name: String
+	
+	init(name: String){
+		self.name = name
+	}
+	
+	convenience init(){
+		self.init(name: "Unknown")
+	}
+}
 
+class Rectangle: Figure {
+	var width = 0.0
+	var height = 0.0
+	
+	init(n: String, w: Double, h: Double) {
+		width = w
+		height = h
+		super.init(name: n)
+	}
+	
+	convenience init(value: Double) {
+		self.init(n: "rect", w: value, h: value)
+	}
+}
 
-
-
-
-
-
-
-
-
+class Square: Rectangle {
+	convenience init(value: Double) {
+		self.init(n: "square", w: value, h: value)
+	}
+	
+	convenience init() {
+		self.init(value: 0.0)
+	}
+}

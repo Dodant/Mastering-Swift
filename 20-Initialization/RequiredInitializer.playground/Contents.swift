@@ -24,25 +24,35 @@
 import Foundation
 
 /*:
- # Required Initializer
- ![required](required.png)
- */
+# Required Initializer
+![required](required.png)
+*/
 
 class Figure {
-   var name: String
-
-   init(name: String) {
-      self.name = name
-   }
-
-   func draw() {
-      print("draw \(name)")
-   }
+	var name: String
+	
+	required init(name: String) {
+		self.name = name
+	}
+	
+	func draw() {
+		print("draw \(name)")
+	}
 }
 
 class Rectangle: Figure {
-   var width = 0.0
-   var height = 0.0
+	var width = 0.0
+	var height = 0.0
+	
+	init(){
+		width = 0.0
+		height = 0.0
+		super.init(name: "unknown")
+	}
+	
+	required init(name: String) {
+		width = 0.0
+		height = 0.0
+		super.init(name: name)
+	}
 }
-
-
