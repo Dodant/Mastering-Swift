@@ -59,19 +59,4 @@ rentedCar?.lessee = person
 person = nil
 rentedCar = nil
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //: [Next](@next)

@@ -22,66 +22,50 @@
 import UIKit
 
 /*:
- # Closure Capture List
- */
+# Closure Capture List
+*/
 
 class Car {
-   var totalDrivingDistance = 0.0
-   var totalUsedGas = 0.0
-   
-   lazy var gasMileage: () -> Double = {
-      return self.totalDrivingDistance / self.totalUsedGas
-   }
-   
-   func drive() {
-      self.totalDrivingDistance = 1200.0
-      self.totalUsedGas = 73.0
-   }
-   
-   deinit {
-      print("car deinit")
-   }
+	var totalDrivingDistance = 0.0
+	var totalUsedGas = 0.0
+	
+	lazy var gasMileage: () -> Double = { [unowned self] in
+		return self.totalDrivingDistance / self.totalUsedGas
+	}
+	
+	func drive() {
+		self.totalDrivingDistance = 1200.0
+		self.totalUsedGas = 73.0
+	}
+	
+	deinit {
+		print("car deinit")
+	}
 }
 
-
-
-
-
-
-
-
-
+var myCar: Car? = Car()
+myCar?.drive()
+myCar?.gasMileage()
+myCar = nil
 
 /*:
- ![1](1.png)
- ![2](2.png)
- 
- ## Value Type
- ![closurecapturelist-valuetype](closurecapturelist-valuetype.png)
- */
+![1](1.png)
+![2](2.png)
 
+## Value Type
+![closurecapturelist-valuetype](closurecapturelist-valuetype.png)
+*/
 
+var a = 0
+var b = 0
+let c = { [a] in print(a,b) }
 
+a = 1
+b = 1
+c()
 
 /*:
- ## Reference Type
- ![closurecapturelist](closurecapturelist.png)
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Reference Type
+![closurecapturelist](closurecapturelist.png)
+*/
 

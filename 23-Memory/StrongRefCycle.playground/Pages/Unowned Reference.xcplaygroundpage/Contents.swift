@@ -58,15 +58,3 @@ person?.car = rentedCar
 
 person = nil
 rentedCar = nil
-
-
-
-
-
-
-
-
-
-
-
-

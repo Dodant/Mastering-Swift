@@ -25,15 +25,16 @@ import UIKit
  # Value Types & Reference Types
  */
 
+// Value Type - Structure, Enumration, Tuple
+// Reference Type - Class, Closure
+
 struct SizeValue {
    var width = 0.0
    var height = 0.0
 }
 
-var value = SizeValue()
-
-
-var value2 = value
+var value = SizeValue()		// Stack에 저장
+var value2 = value			// 값 복사, 개별 인스턴스
 value2.width = 1.0
 value2.height = 2.0
 
@@ -46,10 +47,8 @@ class SizeObject {
    var height = 0.0
 }
 
-var object = SizeObject()
-
-var object2 = object
-
+var object = SizeObject()	// Stack에 Heap 주소 저장
+var object2 = object		// 주소 복사
 object2.width = 1.0
 object2.height = 2.0
 
@@ -57,21 +56,11 @@ object
 object2
 
 
-
 let v = SizeValue()
-
-
 let o = SizeObject()
 o.width = 1.0
 o.height = 2.0
 
 
-
-
-
-
-
-
-
-
-
+// Value type 		- == !=
+// Reference type 	- == != === !==
