@@ -22,22 +22,24 @@
 import UIKit
 
 /*:
- # Associated Types
- ![associatedtype](associatedtype.png)
- */
+# Associated Types
+![associatedtype](associatedtype.png)
+*/
 
 protocol QueueCompatible {
-   func enqueue(value: Int)
-   func dequeue() -> Int?
+	associatedtype Element: Equatable
+	func enqueue(value: Element)
+	func dequeue() -> Element?
 }
 
+class IntegerQueue: QueueCompatible {
+	typealias Element = Int
+	
+	func enqueue(value: Int) { }
+	func dequeue() -> Int? { return 0 }
+}
 
-
-
-
-
-
-
-
-
-
+class DoubleQueue: QueueCompatible {
+	func enqueue(value: Double) { }
+	func dequeue() -> Double? { return 0.0 }
+}

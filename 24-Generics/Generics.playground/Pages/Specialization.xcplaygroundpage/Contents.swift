@@ -39,5 +39,3 @@ func swapValue<T: Equatable>(lhs: inout T, rhs: inout T) {
    lhs = rhs
    rhs = tmp
 }
-
-
