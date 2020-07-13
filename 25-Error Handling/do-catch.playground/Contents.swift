@@ -44,3 +44,20 @@ func parsing(data: [String: Any]) throws {
    // Parsing
 }
 
+// 가장 까다로운 패턴부터 작성
+func handleError() throws {
+	do {
+		try parsing(data: ["name":""])
+	} catch DataParsingError.invalidType {
+		print("invalid type error")
+	} catch {
+		if let error = error as? DataParsingError {
+			switch error {
+			case .invalidType:
+				print("invalid type")
+			default:
+				print("handle error")
+			}
+		}
+	}
+}

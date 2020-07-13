@@ -27,20 +27,26 @@ import UIKit
  ![throw](throw.png)
  ![throws](throws.png)
  */
+// throw, throws
 
+enum DataPardingError: Error {
+	case invalidType
+	case invalidField
+	case missingRequiredField(String)
+}
 
-
-
-
-
-
+func parsing(data: [String: Any]) throws {
+	guard let _ = data["name"] else {
+		throw DataPardingError.missingRequiredField("Name")
+	}
+	guard let _ = data["age"] as? Int else {
+		throw DataPardingError.invalidType
+	}
+}
 
 /*:
  # try Statements
  ![try](try.png)
  */
 
-
-
-
-
+try? parsing(data: [:])
